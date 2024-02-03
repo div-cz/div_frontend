@@ -2,9 +2,18 @@
 
 
 ## How to start
+First, run install all the dependencies:
+```bash
+npm install
+# or
+yarn
+# or
+pnpm
+# or
+bun
+```
 
-First, run the development server:
-
+After that, you can run the development server:
 ```bash
 npm run dev
 # or
@@ -17,6 +26,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Project structure
+The project is structured as follows:
+- `ui` - contains all the components and styles
 
 ## Learn More
 
