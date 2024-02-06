@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { imageSizeEnum } from '@/app/lib/types'
+import { Button } from '@/ui/Button/Button'
 
 export type CardProps = {
   imageSize: imageSizeEnum;
@@ -43,6 +44,7 @@ export const Card = ({
         <a href={''} className="py-1.5 px-3 bg-blue-500 text-white rounded">
           {titleEng}
         </a>
+        <Button title={'Button'} />
       </div>
     </div>
   )
