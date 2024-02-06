@@ -1,10 +1,12 @@
+export type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
+
 type ButtonProps = {
   title: string;
   size?: 'small' | 'medium' | 'large';
   type?: 'button' | 'submit' | 'reset';
   isLoading?: boolean;
   isDisabled?: boolean;
-  variant?: 'primary' | 'secondary' | 'tertiary';
+  variant?: ButtonVariant;
 };
 
 export const Button = (props: ButtonProps) => {
