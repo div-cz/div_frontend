@@ -1,5 +1,9 @@
 # DIV app frontend project
 
+## Table of Contents
+1. [How to start](#how-to-start)
+2. [Project structure](#project-structure)
+3. [Learn more](#learn-more)
 
 ## How to start
 First, run install all the dependencies:
