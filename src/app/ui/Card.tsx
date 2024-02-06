@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import { imageSizeEnum } from '@/app/lib/types'
 import { Button } from '@/components/Button/Button'
+import Link from 'next/link'
+import { urls } from '@/app/lib/webData'
 
 export type CardProps = {
   imageSize: imageSizeEnum;
@@ -10,6 +12,8 @@ export type CardProps = {
   title: string;
   titleEng: string;
   description: string;
+  id?: string | number;
+  redirectUrl?: string;
 };
 
 export function Card({
@@ -19,6 +23,8 @@ export function Card({
   title,
   titleEng,
   description,
+  id,
+  redirectUrl,
 }: CardProps) {
   const imageWidth = imageSize === 'small' ? 100 : 348
   const imageHeight = imageSize === 'small' ? 100 : 196
@@ -36,7 +42,9 @@ export function Card({
       <div className="p-5">
         <h3 className="text-xl mb-3 font-semibold text-green-500">{title}</h3>
         <p className="mb-4 text-gray-200">{description}</p>
-        <Button title={titleEng} onClick={() => console.log('clicked')} />
+        <div className={'flex gap-4'}>
+          <Button type={'link'} href={redirectUrl} title={titleEng} />
+        </div>
       </div>
     </div>
   )

@@ -1,10 +1,13 @@
 import { urls } from '@/app/lib/webData'
+import Link from 'next/link'
 
 export const Navigation = () => {
   return (
     <header className="bg-white">
       <nav className="container mx-auto flex justify-between items-center py-4">
-        <div>Logo</div>
+        <div>
+          <Link href={'/'}>Logo</Link>
+        </div>
         {urls.map((item) => (
           <a
             href={item.url}

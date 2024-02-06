@@ -1,16 +1,19 @@
 import { MouseEventHandler } from 'react'
+import Link from 'next/link'
 
 type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
 type ButtonSize = 'small' | 'default';
+type ButtonType = 'button' | 'submit' | 'reset' | 'link';
 
 type ButtonProps = {
   title: string;
   size?: ButtonSize;
-  type?: 'button' | 'submit' | 'reset';
+  type?: ButtonType;
   isLoading?: boolean;
   isDisabled?: boolean;
   variant?: ButtonVariant;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  href?: string;
 };
 
 export function Button(props: ButtonProps) {
@@ -45,14 +48,24 @@ export function Button(props: ButtonProps) {
     }
   }
 
+  const getButtonStyle = `rounded cursor-pointer shadow ${getSizeStyles(props.size)} ${getVariantStyles(props.variant)}`
+
   return (
-    <button
-      className={`rounded cursor-pointer shadow ${getSizeStyles(props.size)} ${getVariantStyles(props.variant)}`}
-      onClick={props.onClick}
-      disabled={props.isDisabled}
-      type={props.type || 'button'}
-    >
-      {buttonContent}
-    </button>
+    <>
+      {props.type === 'link' ? (
+        <Link className={getButtonStyle} href={props.href || '/'}>
+          {buttonContent}
+        </Link>
+      ) : (
+        <button
+          className={getButtonStyle}
+          onClick={props.onClick}
+          disabled={props.isDisabled}
+          type={props.type || 'button'}
+        >
+          {buttonContent}
+        </button>
+      )}
+    </>
   )
 }

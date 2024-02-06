@@ -1,12 +1,12 @@
 export const urls = [
   {
     id: 1,
-    url: '/films',
+    url: '/movies',
     title: 'Filmy',
   },
   {
     id: 2,
-    url: '/people',
+    url: '/figures',
     title: 'Osobnosti',
   },
   {
