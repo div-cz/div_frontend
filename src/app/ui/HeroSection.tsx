@@ -1,3 +1,3 @@
 export const HeroSection = () => {
-  return <div className={'w-full bg-blue-500 h-80 m-8'}></div>
-}
+  return <div className={"m-8 h-80 w-full bg-blue-500"}></div>;
+};

@@ -1,16 +1,16 @@
-'use client'
-import { Card } from '@/app/ui/Card'
-import { HeroSection } from '@/app/ui/HeroSection'
-import { SectionHeading } from '@/app/ui/SectionHeading'
-import { movies, figures } from '@/app/lib/mockData'
-import { urls } from '@/app/lib/webData'
+"use client";
+import { Card } from "@/app/ui/Card";
+import { HeroSection } from "@/app/ui/HeroSection";
+import { SectionHeading } from "@/app/ui/SectionHeading";
+import { movies, figures } from "@/app/lib/mockData";
+import { urls } from "@/app/lib/webData";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center px-24">
       <HeroSection />
-      <SectionHeading title={'Filmy'} />
-      <div className={'flex flex-wrap gap-4 justify-center'}>
+      <SectionHeading title={"Filmy"} />
+      <div className={"flex flex-wrap justify-center gap-4"}>
         {/* TODO: remove index as key*/}
         {movies.map((movie) => {
           return (
@@ -25,11 +25,11 @@ export default function Home() {
               description={movie.description}
               redirectUrl={`${urls[0].url}/${movie.id}`}
             />
-          )
+          );
         })}
       </div>
-      <SectionHeading title={'Výročí osobností'} />
-      <div className="flex flex-wrap gap-4 justify-center">
+      <SectionHeading title={"Výročí osobností"} />
+      <div className="flex flex-wrap justify-center gap-4">
         {/* TODO: remove index as key*/}
         {figures.map((figure, index) => (
           <Card
@@ -44,5 +44,5 @@ export default function Home() {
         ))}
       </div>
     </main>
-  )
+  );
 }

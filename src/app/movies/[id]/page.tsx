@@ -1,7 +1,7 @@
-import { movies } from '@/app/lib/mockData'
+import { movies } from "@/app/lib/mockData";
 
 export default function Page({ params }: { params: { id: number } }) {
-  const test = movies.find((item) => item.id === Number(params.id))
+  const test = movies.find((item) => item.id === Number(params.id));
 
   return (
     <main className="flex min-h-screen flex-col items-center px-24">
@@ -13,5 +13,5 @@ export default function Page({ params }: { params: { id: number } }) {
         </>
       )}
     </main>
-  )
+  );
 }

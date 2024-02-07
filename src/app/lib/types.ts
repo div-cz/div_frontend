@@ -1,1 +1,1 @@
-export type imageSizeEnum = 'small' | 'medium';
+export type imageSizeEnum = "small" | "medium";

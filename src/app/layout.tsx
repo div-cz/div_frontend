@@ -1,15 +1,15 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import '../styles/globals.css'
-import { Navigation } from '@/app/ui/Navigation'
-import { FooterSection } from '@/app/ui/FooterSection'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "../styles/globals.css";
+import { Navigation } from "@/app/ui/Navigation";
+import { FooterSection } from "@/app/ui/FooterSection";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'DIV.cz',
-  description: 'Databáze filmů a seriálů.',
-}
+  title: "DIV.cz",
+  description: "Databáze filmů a seriálů.",
+};
 
 export default function RootLayout({
   children,
@@ -24,5 +24,5 @@ export default function RootLayout({
         <FooterSection />
       </body>
     </html>
-  )
+  );
 }
