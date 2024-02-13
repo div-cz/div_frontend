@@ -1,10 +1,11 @@
-'use client'
-import { Card } from '@/app/ui/Card'
-import { Navigation } from '@/app/ui/Navigation'
-import { HeroSection } from '@/app/ui/HeroSection'
-import { SectionHeading } from '@/app/ui/SectionHeading'
-import { FooterSection } from '@/app/ui/FooterSection'
-import { movies, figures } from '@/app/lib/mockData'
+"use client";
+import { Card } from "@/app/ui/Card";
+import { Navigation } from "@/app/ui/Navigation";
+import { HeroSection } from "@/app/ui/HeroSection";
+import { SectionHeading } from "@/app/ui/SectionHeading";
+import { FooterSection } from "@/app/ui/FooterSection";
+import { movies, figures } from "@/app/lib/mockData";
+import Lada from "@/app/ui/Lada";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <Navigation />
       <main className="flex min-h-screen flex-col items-center px-24">
         <HeroSection />
-        <SectionHeading title={'Filmy'} />
-        <div className={'flex flex-wrap gap-4'}>
+        {/* <Lada /> */}
+        <SectionHeading title={"Filmy"} />
+        <div className={"flex flex-wrap gap-4"}>
           {/* TODO: remove index as key*/}
           {movies.map((movie, index) => (
             <Card
@@ -27,7 +29,7 @@ export default function Home() {
             />
           ))}
         </div>
-        <SectionHeading title={'Výročí osobností'} />
+        <SectionHeading title={"Výročí osobností"} />
         <div className="flex flex-wrap gap-4">
           {/* TODO: remove index as key*/}
           {figures.map((figure, index) => (
@@ -45,5 +47,5 @@ export default function Home() {
       </main>
       <FooterSection />
     </>
-  )
+  );
 }
